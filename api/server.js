@@ -38,13 +38,14 @@ app.use("/api/users", userRoutes);
 app.use("/api/matches", matchRoutes);
 app.use("/api/messages", messageRoutes);
 
-if (process.env.NODE_ENV === "production") {
-	app.use(express.static(path.join(__dirname, "/client/dist")));
-
-	app.get("*", (req, res) => {
-		res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
-	});
-}
+// Removed static file serving for production since frontend is deployed separately
+// if (process.env.NODE_ENV === "production") {
+// 	app.use(express.static(path.join(__dirname, "/client/dist")));
+// 
+// 	app.get("*", (req, res) => {
+// 		res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
+// 	});
+// }
 
 httpServer.listen(PORT, () => {
 	console.log("Server started at this port:" + PORT);
