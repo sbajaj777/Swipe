@@ -5,6 +5,10 @@ A full-stack swipe-based matchmaking app built with the MERN stack.<br />
 Includes authentication, real-time chat, notifications, profile matching, and more.
 </p>
 
+<p align="center">
+  🔗 <a href="https://swipe-frontend.onrender.com/" target="_blank"><strong>Live Demo</strong></a>
+</p>
+
 ---
 
 ## 🔥 Features
